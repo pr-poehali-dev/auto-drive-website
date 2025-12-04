@@ -359,9 +359,7 @@ export default function Index() {
                 <Icon name="Car" size={32} className="text-primary" />
                 <span className="text-2xl font-heading font-bold">Авто-Драйв</span>
               </div>
-              <p className="text-background/70">
-                Профессиональный автосервис в Самаре. Качество и надежность с 2010 года.
-              </p>
+              <p className="text-background/70">Профессиональный автосервис в Самаре. Качество и надежность</p>
             </div>
             <div>
               <h3 className="font-heading font-semibold text-lg mb-4">Услуги</h3>
