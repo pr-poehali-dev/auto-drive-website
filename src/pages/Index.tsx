@@ -145,7 +145,7 @@ export default function Index() {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://cdn.poehali.dev/files/caf07710-9cc8-4bb3-826c-ec4b799c5990.png')`
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://cdn.poehali.dev/projects/fb89fa05-e43f-4023-a531-204d2b5300df/files/c232a2e7-a730-4ead-84de-8e093f8f10ad.jpg')`
             }}
           />
           <div className="container mx-auto px-4 relative z-10">
@@ -359,7 +359,9 @@ export default function Index() {
                 <Icon name="Car" size={32} className="text-primary" />
                 <span className="text-2xl font-heading font-bold">Авто-Драйв</span>
               </div>
-              <p className="text-background/70">Профессиональный автосервис в Самаре. Качество и надежность</p>
+              <p className="text-background/70">
+                Профессиональный автосервис в Самаре. Качество и надежность с 2010 года.
+              </p>
             </div>
             <div>
               <h3 className="font-heading font-semibold text-lg mb-4">Услуги</h3>
