@@ -45,7 +45,7 @@ const services = [
 ];
 
 const benefits = [
-  { icon: 'Shield', title: 'Гарантия качества', description: 'Официальная гарантия на все виды работ' },
+  { icon: 'Shield', title: 'Гарантия качества', description: 'Надежность и качество с гарантией' },
   { icon: 'Users', title: 'Опытные мастера', description: 'Сертифицированные специалисты с большим опытом' },
   { icon: 'ThumbsUp', title: 'Качественные материалы', description: 'Используем только проверенные запчасти и расходники' },
   { icon: 'Clock', title: 'Быстрое обслуживание', description: 'Выполняем работы точно в срок' }
