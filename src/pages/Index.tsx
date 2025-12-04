@@ -201,7 +201,7 @@ export default function Index() {
 
         <section id="benefits" className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-16">
               Почему выбирают нас
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -224,10 +224,10 @@ export default function Index() {
 
         <section id="services" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-4">
               Наши услуги
             </h2>
-            <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
               Полный спектр услуг по ремонту и обслуживанию автомобилей
             </p>
             <div className="grid md:grid-cols-2 gap-8">
@@ -239,7 +239,7 @@ export default function Index() {
                         <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-4">
                           <Icon name={service.icon as any} size={28} className="text-primary-foreground" />
                         </div>
-                        <CardTitle className="text-2xl font-heading mb-2">{service.title}</CardTitle>
+                        <CardTitle className="text-lg sm:text-xl md:text-2xl font-heading mb-2">{service.title}</CardTitle>
                         <CardDescription className="text-base">{service.description}</CardDescription>
                       </div>
                     </div>
@@ -272,13 +272,13 @@ export default function Index() {
         <section id="contacts" className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-16">
                 Связаться с нами
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <Card className="border-2">
                   <CardHeader>
-                    <CardTitle className="text-2xl font-heading">Контактная информация</CardTitle>
+                    <CardTitle className="text-xl sm:text-2xl font-heading">Контактная информация</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="flex items-start space-x-4">
@@ -331,7 +331,7 @@ export default function Index() {
 
                 <Card className="border-2">
                   <CardHeader>
-                    <CardTitle className="text-2xl font-heading">Форма обратной связи</CardTitle>
+                    <CardTitle className="text-xl sm:text-2xl font-heading">Форма обратной связи</CardTitle>
                     <CardDescription>Оставьте заявку и мы свяжемся с вами в ближайшее время</CardDescription>
                   </CardHeader>
                   <CardContent>
