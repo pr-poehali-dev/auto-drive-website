@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "name": "Отправка заявки в Telegram",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Петров",
+        "phone": "89001234567",
+        "message": "Нужна диагностика",
+        "service": "Компьютерная диагностика"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

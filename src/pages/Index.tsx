@@ -65,14 +65,44 @@ export default function Index() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: 'Заявка отправлена!',
-      description: 'Мы свяжемся с вами в ближайшее время.'
-    });
-    setFormData({ name: '', phone: '', message: '' });
-    setSelectedService(null);
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/368fa8d3-49a2-46ba-84d7-72bcb649e00f', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          message: formData.message,
+          service: selectedService ? services.find(s => s.id === selectedService)?.title : 'Не указана'
+        })
+      });
+
+      if (response.ok) {
+        toast({
+          title: 'Заявка отправлена!',
+          description: 'Мы свяжемся с вами в ближайшее время.'
+        });
+        setFormData({ name: '', phone: '', message: '' });
+        setSelectedService(null);
+      } else {
+        toast({
+          title: 'Ошибка',
+          description: 'Не удалось отправить заявку. Попробуйте позже.',
+          variant: 'destructive'
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Ошибка',
+        description: 'Не удалось отправить заявку. Попробуйте позже.',
+        variant: 'destructive'
+      });
+    }
   };
 
   return (
