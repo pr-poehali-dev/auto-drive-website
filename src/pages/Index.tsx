@@ -115,7 +115,7 @@ export default function Index() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2">
               <Icon name="Car" size={32} className="text-primary" />
-              <span className="text-2xl font-heading font-bold">Авто-Драйв</span>
+              <span className="text-2xl font-heading font-bold">Авто-Драйв Самара</span>
             </div>
 
             <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Основное меню">
