@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
+import StructuredData from '@/components/StructuredData';
 
 const services = [
   {
@@ -106,8 +107,10 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+    <>
+      <StructuredData />
+      <div className="min-h-screen bg-background">
+        <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50" role="banner">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2">
@@ -115,7 +118,7 @@ export default function Index() {
               <span className="text-2xl font-heading font-bold">Авто-Драйв</span>
             </div>
 
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Основное меню">
               <button onClick={() => scrollToSection('home')} className="text-sm font-medium hover:text-primary transition-colors">
                 Главная
               </button>
@@ -170,8 +173,8 @@ export default function Index() {
         )}
       </header>
 
-      <main className="pt-16">
-        <section id="home" className="relative min-h-[600px] flex items-center">
+      <main className="pt-16" role="main">
+        <section id="home" className="relative min-h-[600px] flex items-center" aria-label="Главная секция">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
@@ -199,9 +202,9 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="benefits" className="py-20 bg-muted/30">
+        <section id="benefits" className="py-20 bg-muted/30" aria-labelledby="benefits-heading">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-16">
+            <h2 id="benefits-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-16">
               Почему выбирают нас
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -222,9 +225,9 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="services" className="py-20">
+        <section id="services" className="py-20" aria-labelledby="services-heading">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-4">
+            <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-4">
               Наши услуги
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
@@ -269,10 +272,10 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="contacts" className="py-20 bg-muted/30">
+        <section id="contacts" className="py-20 bg-muted/30" aria-labelledby="contacts-heading">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-16">
+              <h2 id="contacts-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-16">
                 Связаться с нами
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
@@ -426,5 +429,6 @@ export default function Index() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
