@@ -183,9 +183,7 @@ export default function Index() {
           />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl animate-fade-in">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">
-                Профессиональный автосервис для вашего автомобиля
-              </h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">Профессиональный автосервис для вашего автомобиля в Самаре</h1>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8">
                 Качество, надежность и гарантия на все виды работ. Доверьте свой автомобиль профессионалам!
               </p>
